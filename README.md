@@ -1,6 +1,13 @@
-# Spryker Commerce OS
+# ShopUi Module
 
-## Shop Modules
+{{ADD DESCRIPTION HERE}}
 
-### Links
-- **[Spryker Documentation](https://academy.spryker.com/)**
+## Installation
+
+```
+composer require spryker-shop/shop-ui
+```
+
+## Documentation
+
+[Spryker Documentation](https://academy.spryker.com)
