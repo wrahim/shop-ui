@@ -11,7 +11,8 @@
     url: required,
     imageUrl: required,
     price: required,
-    originalPrice: null
+    originalPrice: null,
+    product: required
 } %}
 
 {% block content %}
@@ -22,8 +23,8 @@
     {% endblock %}
 
     {% block groups %}
-        {% widget 'ProductGroupWidget' args [data.abstractId] only %}
-        {% elsewidget 'ProductGroupWidgetPlugin' args [data.abstractId] only %} {# @deprecated Use ProductGroupWidget instead. #}
+        {% widget 'ProductGroupWidget' args [data.product] only %}
+        {% elsewidget 'ProductGroupWidgetPlugin' args [data.product] only %} {# @deprecated Use ProductGroupWidget instead. #}
         {% endwidget %}
     {% endblock %}
 

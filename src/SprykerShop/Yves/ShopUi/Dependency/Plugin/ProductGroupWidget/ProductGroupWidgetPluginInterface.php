@@ -7,6 +7,7 @@
 
 namespace SprykerShop\Yves\ShopUi\Dependency\Plugin\ProductGroupWidget;
 
+use Generated\Shared\Transfer\ProductViewTransfer;
 use Spryker\Yves\Kernel\Dependency\Plugin\WidgetPluginInterface;
 
 /**
@@ -24,5 +25,5 @@ interface ProductGroupWidgetPluginInterface extends WidgetPluginInterface
      *
      * @return void
      */
-    public function initialize($idProductAbstract, $template): void;
+    public function initialize(ProductViewTransfer $productViewTransfer, $template): void;
 }
