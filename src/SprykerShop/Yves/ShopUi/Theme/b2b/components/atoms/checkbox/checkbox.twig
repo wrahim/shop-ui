@@ -1,9 +1,4 @@
-{% extends model('component') %}
-
-{% define config = {
-    name: 'checkbox',
-    tag: 'span'
-} %}
+{% extends molecule('checkbox', '@SprykerShop:ShopUi') %}
 
 {% define data = {
     label: '',
@@ -12,11 +7,6 @@
 
 {% define classes = {
     test: '',
-} %}
-
-{% define attributes = {
-    type: 'checkbox',
-    required: false
 } %}
 
 {% if data.isChecked %}
