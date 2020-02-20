@@ -83,11 +83,14 @@ class ShopUiTwigExtension extends TwigExtension
      */
     public function getFunctions(): array
     {
+
         return [
             new TwigFunction(self::FUNCTION_GET_PUBLIC_FOLDER_PATH, function ($relativePath) {
+                $hash = file_get_contents(APPLICATION_ROOT_DIR . '/config/Yves/yves-assets-hash.txt');
+                $hash = $hash ? $hash . '/' : $hash;
                 $publicFolderPath = $this->getPublicFolderPath();
 
-                return $publicFolderPath . $relativePath;
+                return $publicFolderPath . $hash . $relativePath;
             }, [
                 $this,
                 self::FUNCTION_GET_PUBLIC_FOLDER_PATH,
